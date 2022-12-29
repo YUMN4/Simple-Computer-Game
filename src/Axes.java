@@ -46,39 +46,37 @@ public class Axes extends Weapon implements Upgradable {
 
     public void upgrade(){
         System.out.println("Axes is upgraded");
-        //if(numOfAxes == 1){
-                //if (sizeOfAxes[0] <= 5) {
-                    //sizeOfAxes[0] += 1;
-                    //sizeOfAxes[1] = 0;
-                //}
-                //else if(sizeOfAxes[0] > 5){
-                    //numOfAxes++;
-                    //sizeOfAxes[1] = 1;
-                //}
-        //}
-        //else if(numOfAxes == 2){
-            //sizeOfAxes[1] = 1;
-        //}
         if(numOfAxes == 0){
             numOfAxes++;
         }
-        //The method void upgrade() that increments the size of axe 1
-        // by 1 if there is only one axe and size of it is less or equal to 5,
-        if(numOfAxes == 1 && sizeOfAxes[0] <= 5){
+
+        else if(numOfAxes == 1 && sizeOfAxes[0] <= 5){
             sizeOfAxes[0] += 1;
             sizeOfAxes[1] = 0;
         }
 
-       //if it’s size is already reached 5, add another axe with the size of 1,
         else if(numOfAxes == 1 && sizeOfAxes[0] > 5){
             sizeOfAxes[1] = 1;
             numOfAxes++;
         }
 
-      //otherwise just increment the size axe 2 by 1.
         else{
             sizeOfAxes[1] += 1;
         }
+
+        //if(numOfAxes == 1){
+            //if (sizeOfAxes[0] <= 5) {
+            //sizeOfAxes[0] += 1;
+            //sizeOfAxes[1] = 0;
+        //}
+        //else if(sizeOfAxes[0] > 5){
+            //numOfAxes++;
+            //sizeOfAxes[1] = 1;
+        //}
+        //}
+        //else if(numOfAxes == 2){
+            //sizeOfAxes[1] = 1;
+        //}
     }
 
     @Override
